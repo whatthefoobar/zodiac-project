@@ -5,25 +5,24 @@ const express = require('express');
 
 const app = express();
 
-const url= "https://www.theguardian.com/international";
+const url= "https://killer.cloud/serial-killers/by/zodiac-sign/capricorn"; // for testing purposes added a zodiac sign category
+
 
 axios(url)
     .then(response => {
         const html = response.data;
         // console.log(html);
         const $ = cheerio.load(html);
-        const articles = [];
+        const killers = [];
 
 
-        $(".js-headline-text", html).each(function(){
-          const title = $(this).text();
-          const url = $(this).attr("href"); //instead of : const url = $(this).find("a").attr("href");
-          articles.push({
-              title,
-              url
-          });
+        $("h3.pad10t", html).each(function(){
+          const killer = $(this).text();
+          killers.push({
+            killer
+          }); // if we only keep the serial killer name will store the names in a simple array not an array of obj
         });
-        console.log(articles);
+        console.log(killers); // maybe put the f that populates the serial killer result grid box here
     }).catch(err => console.log(err));
 
 app.listen(PORT, () => console.log(`server running on port ${PORT}`))
