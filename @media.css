@@ -1,0 +1,22 @@
+@media screen and (max-width: 756px) {
+    .form{
+        width: 70vw;
+        padding: none;
+    }
+    #date{
+        
+    }
+}
+@media screen and (max-width: 560px) {
+    .form{
+        width: 100vw;
+        padding: none;
+    }
+}
+        
+        
+        
+       
+        
+       
+       
