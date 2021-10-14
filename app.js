@@ -44,10 +44,9 @@ let savedBirthday = JSON.parse(localStorage.getItem("birthday"));
 // CREATE CURRENT DATE OBJECT
 let today = new Date();
 
-
 let currentDate = {
   day: today.getDate(),
-  month: today.getMonth(),
+  month: today.getMonth()+1,
   year: today.getFullYear(),
 }
 
@@ -59,7 +58,7 @@ let ageDays = ageYears * 365 + (currentDate.month * 30) + currentDate.day;
 
 //PUSH USERS AGE INTO HTML 
 
-document.getElementById("slot1").innerHTML = "You have lived " + ageYears + " years " + ageMonths + " months " + ageDays + " days without meeting this guy. But you are part of the same Zodiac family. How cool?" 
+document.getElementById("slot1").innerHTML = "You have lived " + ageYears + " years " + currentDate.month + " months and " + currentDate.day + " days without meeting this guy. But you are part of the same Zodiac family. How cool?" 
 
 console.log("You have lived " + ageYears + " years " + ageMonths + " months " + ageDays + " days without meeting this guy. But you are part of the same Zodiac family. How cool?");
 
