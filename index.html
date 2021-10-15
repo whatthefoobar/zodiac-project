@@ -9,13 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
     <!-- Css links -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles.css/main.css">
+    <link rel="stylesheet" href="/styles.css/form.css">
+    <link rel="stylesheet" href="/styles.css/submitSlide.css">
+    <link rel="stylesheet" href="/styles.css/@media.css">
     
-    <link rel="stylesheet" href="/@media.css">
-    <title>Document</title>
+    <title>zodiac killer</title>
 </head>
 <body>
-   
+   <!--Main page  -->
 <section class="first-page">
 
   <div class="button1">
@@ -23,36 +25,51 @@
   </div> 
 </section>
     
-
-
-
+<!--Birthday Form Slide  -->
 <section class="second-page">  
+    
     <div class="birthday-form">
+
         <video id="background-video" autoplay loop muted poster="/mp4/blood-hand.mp4">
             <source src="/mp4/blood-hand.mp4" type="video/mp4">
         </video>
         
-        <form class ="form">
+        <!-- temporary onClick button for submit slider -->
+        <!-- <button class="slide-button" onclick="submitSlide()" > click </button> -->
+        
+        <form class="form">
             <label for="date">Enter your date:</label><br>
             <input type="date" id="date" name="date"><br>
             <input type="submit" id="submit" value="Submit" >
         </form>
         <div class="result"> </div>
-    </div>
-    
-    <div class="third-page">
-        <article class="left-article">
-            <p> hgjfjhgdfghd </p>
-    
-        </article>
-    
-        <article class="right-article">
-    
-        </article>
-    </div>
+       
+        <!-- Submit Result Slide -->
+        <section class="submit-slide">
+                
+            <video id="background-video-slide" autoplay loop muted poster="/mp4/white.smoke.mp4">
+                    <source src="/mp4/white.smoke.mp4" type="video/mp4">
+            </video>
+            
+            <article class="content">
+                <h1>Meet your zodiac relative!!</h1> <br>
+                <h3> You have made it 34years | 3months | 5days without meeting them </h3>
+                <h3>Hannibal Lecter</h3>
+            </article>
+            
+            <section class="articles">
+                <article class="left-article">
+                    <img src="/images/hanabel.png" alt="killer-pic">
+                </article>
+            </section>
+        
+        </div>
+    </section>
+
+ 
     
 
-</section>
+
 
 
        

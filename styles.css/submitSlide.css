@@ -1,0 +1,140 @@
+
+.slide-button  {
+    width: 500px;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+.submit-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    
+    
+    
+    width: 100%;
+    height: 100vh;
+    
+    /* z-index: 1; */
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: transform ease 3.5s;
+    }
+  
+.submit-active {
+    transform: translateX(0%);
+}
+
+#background-video-slide {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.content {
+    color: seashell;
+    display: flex;
+    width: 97%;
+    height: 30vh;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+    
+    
+    
+.content h1 {
+    
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: 'Coming Soon', cursive;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.content h3 {
+    display: flex;
+     
+    
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: 'Coming Soon', cursive;
+    font-size: 26px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+    
+    
+/* .articles {
+    height: 63vh;
+    width: 97%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+.left-article {
+    
+    width: 583px;
+    height: 433px;
+    /* border-style: solid;
+    border-color: white; */
+    
+}
+.left-article img {
+    overflow: scroll;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* original code for image and bio */
+
+/* .articles {
+   
+    width: 97%;
+    height: 64vh;
+    display: flex;
+}
+
+.left-article {
+  
+   flex: 1;
+   margin-right: 24px;
+}
+.left-article img {
+    width: 100%;
+    height: auto;
+    border-image-repeat: repeat;
+}
+.right-article {
+   background-color: whitesmoke;
+   flex: 1;
+
+   overflow: scroll;
+}
+.right-article p {
+    margin: 20px;
+    font-size: 50px;
+} */

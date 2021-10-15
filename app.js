@@ -11,8 +11,8 @@ document.querySelector(".birthday-form").classList.toggle("button-active");
 console.log(document.querySelector(".birthday-form").classList);
 }
 
-function displayArticle() {
-  document.querySelector(".third-page").classList.toggle("article-slide"); 
+function submitSlide() {
+  document.querySelector(".submit-slide").classList.toggle("submit-active"); 
 }
 
 

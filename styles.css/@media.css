@@ -1,0 +1,126 @@
+
+
+@media screen and (max-width: 756px) {
+
+    .birthday-form {
+        flex-direction: column;
+    }
+
+    .form{
+        width: 88vw;
+        height: auto;
+        padding: none;
+    }
+}
+
+    /*OLD Articles */
+    /* .articles {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+        
+       
+   
+    .left-article {
+        width: 96vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+        margin-bottom: 14px;
+        margin-top: 8px;
+        flex: 0;
+    }
+    .left-article img {
+        height: auto;
+    }
+    .right-article {
+        width: 96%;
+        background-color: whitesmoke;
+        flex: 0;
+        overflow: scroll;
+    }
+    .right-article p {
+        margin: 0px;
+        margin: 30px;
+        font-size: 20px;
+        text-align: center;
+     } */
+        
+        
+        
+     
+     
+    
+     
+     @media screen and (max-width: 600px) {
+         
+         
+        .left-article {
+            width: 93vw;
+            height: auto;
+        }
+            
+
+        .content h1 {
+            font-size: 8vw;
+        }
+        .content p {
+            font-size: 4vw;
+            margin: 0;
+        }
+        .content {
+            width: 97%;
+            height: 30vh;
+            margin: 20px 0px 20px 0px;
+        }
+    }
+
+    @media screen and (max-width: 460px) {
+        .form{
+            width: 88vw;
+            height: 60vh;
+            padding: none;
+        }
+
+    }
+
+       
+           
+            
+           
+           
+            
+            
+        
+          
+           
+            
+
+      
+
+            
+           
+       
+       
+        
+        
+    
+  
+       
+        
+         
+        
+        
+   
+
+
+        
+        
+        
+       
+        
+       
+       
