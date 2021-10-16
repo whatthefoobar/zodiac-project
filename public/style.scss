@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #333;
+  }
+  
+  .form {
+    margin: 5vh auto;
+    border: 2px solid #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+  }
+  
+  #date {
+    font-size: 20px;
+  }
+  
+  input[type=submit] {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  #slot1{
+    max-width:700px;
+    margin: 10vh auto;
+    color: white;
+    font-size: 20px;
+  }
+  
+
+
+  /*# sourceMappingURL=style.css.map */
