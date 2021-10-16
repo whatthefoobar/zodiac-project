@@ -1,3 +1,5 @@
+//hardcode testing , will use scraper data instead of hardcodded array
+
 const resultBox = document.querySelector(".result");
 console.log(resultBox);
 
