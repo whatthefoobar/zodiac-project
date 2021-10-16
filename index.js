@@ -8,6 +8,10 @@ const app = express();
 app.use(express.static('public')) // to serve our static files: img css etc
 
 const url= "https://killer.cloud/serial-killers/by/zodiac-sign/capricorn"; // for testing purposes added a zodiac sign category
+// let cat = "capricorn";
+// let category= "url+cat";
+// let category; // this is the zodiac sign generated;
+// console.log("Our url is:",url);
 
 
 axios(url)
