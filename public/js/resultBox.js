@@ -1,8 +1,8 @@
-// const resultBox = document.querySelector(".result");
-// console.log(resultBox);
+const resultBox = document.querySelector(".result");
+console.log(resultBox);
 
-// let list = ["Jeffrey Dahmer", "Ted Bundy", "H.H. Holmes", "Ed Gein", "Otis Toole", "Henry Lee Lucas", "Richar Ramirez", "Andrei Chikatilo", "John Wayne Gacy", "Gary Ridgway", "BTK killer"]
+let list = ["Jeffrey Dahmer", "Ted Bundy", "H.H. Holmes", "Ed Gein", "Otis Toole", "Richar Ramirez", "Andrei Chikatilo", "John Wayne Gacy", "Gary Ridgway"]// for testing purposes
 
-// list.forEach((killer) =>{
-  
-// });
+list.forEach((killer) => {
+  resultBox.innerHTML+=`<div class="box">${killer}</div> `
+});

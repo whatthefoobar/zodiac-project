@@ -3,15 +3,19 @@ const PORT = 8000;
 const axios = require('axios');
 const cheerio = require('cheerio');
 const express = require('express');
+// var zodiacTools = require('./public/js/app');
+// 
+
+
+//  console.log(pi);
+console.log("testing Testing");
+
+// console.log(typeOf(zodiacTools.getZodiacSign()));
 
 const app = express();
 app.use(express.static('public')) // to serve our static files: img css etc
 
 const url= "https://killer.cloud/serial-killers/by/zodiac-sign/capricorn"; // for testing purposes added a zodiac sign category
-// let cat = "capricorn";
-// let category= "url+cat";
-// let category; // this is the zodiac sign generated;
-// console.log("Our url is:",url);
 
 
 axios(url)
@@ -28,7 +32,7 @@ axios(url)
             killer
           }); // if we only keep the serial killer name will store the names in a simple array not an array of obj
         });
-        console.log(killers); // maybe put the f that populates the serial killer result grid box here
+        // console.log(killers); // maybe put the f that populates the serial killer result grid box here
     }).catch(err => console.log(err));
 
 //get data from index.html
@@ -41,3 +45,7 @@ app.post("/", function(req, res){
 });
 
 app.listen(PORT, () => console.log(`server running on port ${PORT}`))
+
+
+//get the zodiac sign from the function getZodiacSign in app.js and complete url 
+//f that populates the result box with serial killer scraping results
