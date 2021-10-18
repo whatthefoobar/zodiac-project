@@ -171,7 +171,21 @@ function getKillersFromZodiac(zodiac){
     });
 }
 
+// Form SLIDE FUNCTIONS
 
+function displayModal() {
+  document.querySelector(".birthday-form").classList.toggle("button-active");
+  // document.querySelector(".first-page").classList.toggle("button-none");
+  console.log(document.querySelector(".birthday-form").classList);
+  }
+  
+  function submitSlide() {
+    document.querySelector(".submit-slide").classList.toggle("submitActive"); 
+  }
+  function slideBack() {
+    document.querySelector(".submit-slide").classList.add("submitInactive");  
+  }
+  
 
 
 
