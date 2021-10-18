@@ -1,3 +1,2 @@
 # zodiac-project
-
-To be filled later :D
+In your VScode : right click the Web Scraper folder and chose Open in Integrated Terminal then run npm i to install your node modules (never git push these as they are too large)  then also in terminal run the "npm run start" script - if it doesn't work maybe you need to install nodemon so (also in your vsc terminal) npm install -g nodemon. To test this scraper you will see the results in your console which will be shown in your vsc terminal. To test it out replace my url with one of your choice and look for a class of something you wanna collect in my example i used an article title and its url link. Have fun!!!!! (BTW: not my code, credit goes to ms Ania Kubów).
