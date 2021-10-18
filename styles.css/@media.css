@@ -1,6 +1,4 @@
-
-
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 768px) {
 
     .birthday-form {
         flex-direction: column;
@@ -11,7 +9,60 @@
         height: auto;
         padding: none;
     }
+    .content-top {
+        width: 100%;
+        
+        
+        justify-content: center;
+        
+    }
+    .content-bottom {
+        
+        justify-content:flex-start;
+        height: auto;
+    }
+
 }
+
+@media screen and (max-width: 715px) {
+
+    .content-top h1 {
+        font-size: 8vw;
+    }
+   
+
+  
+    
+    .input-img {
+        /* width: 65vw; */
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 510px) {
+    .input-img {
+        
+        width: 90%;
+        height: auto;
+    }
+    .input-name {
+       font-size: 27px;
+    }
+    .input-text {
+       font-size: 20px;
+    }
+    .far {
+        font-size: 30px;
+    }
+        
+        
+}
+
+
+
+
+
 
     /*OLD Articles */
     /* .articles {
@@ -55,28 +106,7 @@
      
     
      
-     @media screen and (max-width: 600px) {
-         
-         
-        .left-article {
-            width: 93vw;
-            height: auto;
-        }
-            
-
-        .content h1 {
-            font-size: 8vw;
-        }
-        .content p {
-            font-size: 4vw;
-            margin: 0;
-        }
-        .content {
-            width: 97%;
-            height: 30vh;
-            margin: 20px 0px 20px 0px;
-        }
-    }
+     
 
     @media screen and (max-width: 460px) {
         .form{

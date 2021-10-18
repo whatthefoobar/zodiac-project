@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/styles.css/form.css">
     <link rel="stylesheet" href="/styles.css/submitSlide.css">
     <link rel="stylesheet" href="/styles.css/@media.css">
+    <!-- Font awsome -->
+    <script src="https://kit.fontawesome.com/eefc0ec0dc.js" crossorigin="anonymous"></script>
     
     <title>zodiac killer</title>
 </head>
@@ -24,7 +26,6 @@
     <button onclick="displayModal()"> Press me </button>
   </div> 
 </section>
-    
 <!--Birthday Form Slide  -->
 <section class="second-page">  
     
@@ -43,28 +44,38 @@
             <input type="submit" id="submit" value="Submit" >
         </form>
         <div class="result"> </div>
-       
+       </div>
         <!-- Submit Result Slide -->
         <section class="submit-slide">
-                
+              
+            <!-- background video -->
             <video id="background-video-slide" autoplay loop muted poster="/mp4/white.smoke.mp4">
-                    <source src="/mp4/white.smoke.mp4" type="video/mp4">
-            </video>
+              <source src="/mp4/white.smoke.mp4" type="video/mp4">
+          </video>
             
-            <article class="content">
-                <h1>Meet your zodiac relative!!</h1> <br>
-                <h3> You have made it 34years | 3months | 5days without meeting them </h3>
-                <h3>Hannibal Lecter</h3>
-            </article>
             
-            <section class="articles">
-                <article class="left-article">
-                    <img src="/images/hanabel.png" alt="killer-pic">
-                </article>
+            <div class="content">
+                <nav> <div onclick="slideBack()" id="arrow" ><i class="far fa-arrow-alt-circle-right"></i></div></nav>
+                
+                <article class="content-top">
+                    
+                <h1>Meet your zodiac relative!! </h1> <br>
+                
+                <h2 class="input-text"> You have made it: <br> 30years | 3months | 5days  without meeting</h2>
+                </article> 
+                
+                <article class="content-bottom">
+                        <h1 class="input-name">Hannibal Lecter</h1>
+                        <img class="input-img" src="/images/hanabel.png" alt="killer-pic">
+                    </article>
+                </div>
+                
+            
             </section>
+            
+
+            
         
-        </div>
-    </section>
 
  
     
