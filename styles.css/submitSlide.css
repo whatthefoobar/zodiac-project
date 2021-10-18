@@ -1,0 +1,180 @@
+
+.slide-button  {
+    width: 500px;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+.submit-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    
+    /* z-index: 1; */
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: transform ease 3.5s;
+    }
+    
+    
+    #arrow {
+        width: 100px;
+        margin-left: 6px;
+        
+    }
+    .far {
+        font-size: 40px;
+        color: #fff;
+        
+    }
+    
+    
+    
+    .submitActive {
+        transform: translateX(0%);
+    }
+    .submitInactive {
+        transform: translateX(100%);
+    }
+
+#background-video-slide {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.content {
+    
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Coming Soon', cursive;
+    color: seashell;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: flex-start;
+    
+    
+}
+    
+
+    
+.content-top {
+    width: 100%;
+    flex: 0.7;
+    
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+.content-top h1 {
+    font-size: 60px;
+    
+}
+.input-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 24px;
+}
+    
+    
+
+.content-bottom {
+    width: 100%;
+    flex: 1.3;
+    
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly ;
+    flex-direction: column;
+}
+
+.input-name {
+    width: 100%;
+    text-align: center;
+    
+    
+    font-size: 40px;
+}
+
+.input-img {
+    width: 500px;
+    height: auto;
+}
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+/* .articles {
+    height: 63vh;
+    width: 97%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+/* original code for image and bio */
+
+/* .articles {
+   
+    width: 97%;
+    height: 64vh;
+    display: flex;
+}
+
+.left-article {
+  
+   flex: 1;
+   margin-right: 24px;
+}
+.left-article img {
+    width: 100%;
+    height: auto;
+    border-image-repeat: repeat;
+}
+.right-article {
+   background-color: whitesmoke;
+   flex: 1;
+
+   overflow: scroll;
+}
+.right-article p {
+    margin: 20px;
+    font-size: 50px;
+} */
