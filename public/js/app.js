@@ -1,6 +1,3 @@
-let zodiacSign;
-let inputDate;
-
 //AUTO FILL THE INPUT FIELD, IF LOCALSTORAGE ALREADY HAD A VALUE (PROBABLY FROM A PREVIOUS INTERACTION WITH THE SITE)
 function autoFillDate() {
   if(localStorage.length !== 0) {
@@ -17,7 +14,7 @@ function submitBreak(e){
   //PREVENT THE BUTTON FROM ACTUALLY SEND THE FORM (THROUGH A POST METHOD, FOR EXAMPLE)
   e.preventDefault();
 
-  inputDate = document.getElementById("date").value;
+  let inputDate = document.getElementById("date").value;
 
   //GET VALUES FROM USER INPUT
   let birthdayDay = inputDate.substring(8);
@@ -32,17 +29,18 @@ function submitBreak(e){
     year: birthdayYear
   }
 
+  //GET USER AGE IN YEARS MONTHS AND DAYS BASED ON USER INPUT AND POPULATE HTML WITH IT
+  getAge(inputDate);
+
   //CALL GET ZODIAC SIGN FUNCTION AND PASS DAY AND MONTH INPUT BY THE USER AS VALUES
-  zodiacSign = getZodiacSign(birthdayDay, birthdayMonth);
+  let zodiac = getZodiacSign(birthdayDay, birthdayMonth);
+  getKillersFromZodiac(zodiac)
 
   // SET BIRTHDAY, INPUT STRING AND ZODIAC SIGN IN LOCAL STORAGE
-  setLocalStorage(mybirthdayObj, inputDate, zodiacSign);
+  setLocalStorage(mybirthdayObj, inputDate, zodiac);
       
   // RETRIEVE BIRTHDAY OBJECT FROM LOCAL STORAGE
   getLocalStorage();
-
-  //GET USER AGE IN YEARS MONTHS AND DAYS BASED ON USER INPUT AND POPULATE HTML WITH IT
-  getAge(inputDate);
 
 };
 
@@ -120,19 +118,6 @@ function getAge(dateString) {
   return document.getElementById("slot1").innerHTML = "You have lived " + ageString + " without meeting this guy. But you are part of the same Zodiac family. How cool?" 
 };
 
-function setLocalStorage(obj, date, sign) {
-  // SAVE BIRTHDAY OBJECT TO LOCAL STORAGE
-  localStorage.setItem("birthday", JSON.stringify(obj));
-  localStorage.setItem("birthdayString", date); //also storing the user's input as it's served (as a string) just for practice. This way we've stored and retrieved a string BUT ALSO stored and retrieved the same data as an object.
-  localStorage.setItem("zodiacSign", sign);
-}
-
-function getLocalStorage() {
-  // RETRIEVE BIRTHDAY OBJECT FROM LOCAL STORAGE
-  let savedBirthday = JSON.parse(localStorage.getItem("birthday"));
-  
-}
-
 function getZodiacSign(day, month) {
 
   if((month == 1 && day <= 20) || (month == 12 && day >=21)) {
@@ -162,20 +147,30 @@ function getZodiacSign(day, month) {
   }
 }
 
-console.log(inputDate);
+function setLocalStorage(obj, date, sign) {
+  // SAVE BIRTHDAY OBJECT TO LOCAL STORAGE
+  localStorage.setItem("birthday", JSON.stringify(obj));
+  localStorage.setItem("birthdayString", date); //also storing the user's input as it's served (as a string) just for practice. This way we've stored and retrieved a string BUT ALSO stored and retrieved the same data as an object.
+  localStorage.setItem("zodiacSign", sign);
+}
 
-// module.exports={
-//  fname,
-//  city,
-//  company
-// }
+function getLocalStorage() {
+  // RETRIEVE BIRTHDAY OBJECT FROM LOCAL STORAGE
+  let savedBirthday = JSON.parse(localStorage.getItem("birthday"));
+  
+}
 
-// const pi = 3.14;
-// module.exports = {
-//  pi
-// };
+//FETCH DATA FROM API ENDPOINT 
 
-//how do i export this variable to node zodiacSign
+function getKillersFromZodiac(zodiac){
+  const resultBox = document.querySelector(".result");
+  fetch(`/api?zodiac=${zodiac}`)
+    .then((response) => response.json())
+    .then((data) => {
+      resultBox.innerHTML= data[Math.floor(Math.random()* data.length)].killer;
+    });
+}
+
 
 
 
