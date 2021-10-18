@@ -48,3 +48,13 @@ input[type=submit] {
   color: white;
   font-size: 20px;
 }
+
+.result {
+  max-width: 600px;
+  margin: 0 auto;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid white;
+  padding: 30px;
+}
