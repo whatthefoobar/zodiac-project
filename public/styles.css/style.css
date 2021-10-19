@@ -5,57 +5,210 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #333;
-}
-
-.form {
-  margin: 5vh auto;
-  border: 2px solid #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.birthday-form {
+  width: 100%;
+  height: 100%;
+  position: fixed;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  top: 0;
+  left: 0;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  max-width: 600px;
-  padding: 30px;
+}
+.birthday-form #background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.birthday-form .form {
+  font-family: "Coming Soon", cursive;
+  border: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 663px;
+  padding: 11px;
   text-align: center;
   color: #fff;
-  font-size: 25px;
+  font-size: 35px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
-#date {
+.birthday-form .form #date {
   font-size: 20px;
 }
-
-input[type=submit] {
+.birthday-form .form input[type=submit] {
   font-size: 20px;
   padding: 5px 10px;
   border-radius: 10px;
 }
 
-#slot1 {
-  max-width: 700px;
-  margin: 10vh auto;
-  color: white;
-  font-size: 20px;
+.submit-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform ease 3.5s;
+}
+.submit-slide #background-video-slide {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.submit-slide .content {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Coming Soon", cursive;
+  color: seashell;
+}
+.submit-slide .content nav {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: flex-start;
+}
+.submit-slide .content nav #arrow {
+  width: 100px;
+  margin-left: 6px;
+}
+.submit-slide .content nav .far {
+  font-size: 40px;
+  color: #fff;
+}
+.submit-slide .content nav .slide-button {
+  width: 500px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+.submit-slide .content .content-top {
+  width: 100%;
+  flex: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+}
+.submit-slide .content .content-top .meet-your {
+  font-size: 60px;
+}
+.submit-slide .content .content-top .input-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+.submit-slide .content .content-bottom {
+  width: 100%;
+  flex: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.submit-slide .content .content-bottom .input-name {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  max-width: 800px;
+}
+.submit-slide .content .content-bottom .input-img {
+  width: 500px;
+  height: auto;
 }
 
-.result {
-  max-width: 600px;
-  margin: 0 auto;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  border: 2px solid white;
-  padding: 30px;
+.submitActive {
+  transform: translateX(0%);
 }
+
+.submitInactive {
+  transform: translateX(100%);
+}
+
+@media screen and (max-width: 768px) {
+  .birthday-form {
+    flex-direction: column;
+  }
+
+  .form {
+    width: 88vw;
+    height: auto;
+    padding: none;
+  }
+
+  .content-top {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content-bottom {
+    justify-content: flex-start;
+    height: auto;
+  }
+}
+@media screen and (max-width: 715px) {
+  .content-top h1 {
+    font-size: 8vw;
+  }
+
+  .input-img {
+    height: auto;
+  }
+}
+@media screen and (max-width: 510px) {
+  .input-img {
+    width: 90%;
+    height: auto;
+  }
+
+  .input-name {
+    font-size: 27px;
+  }
+
+  .input-text {
+    font-size: 20px;
+  }
+
+  .far {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .form {
+    width: 88vw;
+    height: 60vh;
+    padding: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+
 /*# sourceMappingURL=style.css.map */

@@ -35,6 +35,7 @@ function submitBreak(e){
 
   //CALL GET ZODIAC SIGN FUNCTION AND PASS DAY AND MONTH INPUT BY THE USER AS VALUES
   let zodiac = getZodiacSign(birthdayDay, birthdayMonth);
+  document.querySelector(".input-text").innerHTML+= ` But you both share the ${zodiac} zodiac sign. How cool?`;
   getKillersFromZodiac(zodiac)
 
   // SET BIRTHDAY, INPUT STRING AND ZODIAC SIGN IN LOCAL STORAGE
@@ -116,7 +117,7 @@ function getAge(dateString) {
     ageString = age.months + monthString + " old.";
   else ageString = "Oops! Could not calculate age!";
 
-  return document.querySelector(".input-text").innerHTML = "You have lived " + ageString + " without meeting this guy. But you are part of the same Zodiac family. How cool?" 
+  return document.querySelector(".input-text").innerHTML = "You have lived " + ageString + " without meeting this guy." 
 };
 
 function getZodiacSign(day, month) {
@@ -174,14 +175,14 @@ function getKillersFromZodiac(zodiac){
 
 // Form SLIDE FUNCTIONS
 
-const modalBtn = document.querySelector(".modalBtn");
-modalBtn.addEventListener("click", displayModal);
+// const modalBtn = document.querySelector(".modalBtn");
+// modalBtn.addEventListener("click", displayModal);
 const sideBackBtn = document.querySelector(".sideBackBtn");
 sideBackBtn.addEventListener("click", slideBack);
 
-function displayModal() {
-  document.querySelector(".birthday-form").classList.toggle("button-active");
-}
+// function displayModal() {
+//   document.querySelector(".birthday-form").classList.toggle("button-active");
+// }
   
 function submitSlide() {
   document.querySelector(".submit-slide").classList.remove("submitInactive"); 
