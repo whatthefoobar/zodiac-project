@@ -113,11 +113,14 @@ nav {
     flex-direction: column;
 }
 
+.input-text{
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
 .input-name {
     width: 100%;
     text-align: center;
-    
-    
     font-size: 40px;
 }
 

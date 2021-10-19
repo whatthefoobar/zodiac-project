@@ -13,6 +13,7 @@ document.getElementById("submit").addEventListener("click", submitBreak);
 function submitBreak(e){
   //PREVENT THE BUTTON FROM ACTUALLY SEND THE FORM (THROUGH A POST METHOD, FOR EXAMPLE)
   e.preventDefault();
+  submitSlide()// slides to result section
 
   let inputDate = document.getElementById("date").value;
 
@@ -115,7 +116,7 @@ function getAge(dateString) {
     ageString = age.months + monthString + " old.";
   else ageString = "Oops! Could not calculate age!";
 
-  return document.getElementById("slot1").innerHTML = "You have lived " + ageString + " without meeting this guy. But you are part of the same Zodiac family. How cool?" 
+  return document.querySelector(".input-text").innerHTML = "You have lived " + ageString + " without meeting this guy. But you are part of the same Zodiac family. How cool?" 
 };
 
 function getZodiacSign(day, month) {
@@ -163,7 +164,7 @@ function getLocalStorage() {
 //FETCH DATA FROM API ENDPOINT 
 
 function getKillersFromZodiac(zodiac){
-  const resultBox = document.querySelector(".result");
+  const resultBox = document.querySelector(".input-name");
   fetch(`/api?zodiac=${zodiac}`)
     .then((response) => response.json())
     .then((data) => {
@@ -173,18 +174,23 @@ function getKillersFromZodiac(zodiac){
 
 // Form SLIDE FUNCTIONS
 
+const modalBtn = document.querySelector(".modalBtn");
+modalBtn.addEventListener("click", displayModal);
+const sideBackBtn = document.querySelector(".sideBackBtn");
+sideBackBtn.addEventListener("click", slideBack);
+
 function displayModal() {
   document.querySelector(".birthday-form").classList.toggle("button-active");
-  // document.querySelector(".first-page").classList.toggle("button-none");
-  console.log(document.querySelector(".birthday-form").classList);
-  }
+}
   
-  function submitSlide() {
-    document.querySelector(".submit-slide").classList.toggle("submitActive"); 
-  }
-  function slideBack() {
-    document.querySelector(".submit-slide").classList.add("submitInactive");  
-  }
+function submitSlide() {
+  document.querySelector(".submit-slide").classList.toggle("submitActive"); 
+}// call this in our submitBreak f
+
+function slideBack() {
+  document.querySelector(".submit-slide").classList.add("submitInactive");  
+}
+  
   
 
 
