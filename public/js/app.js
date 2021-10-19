@@ -184,11 +184,15 @@ function displayModal() {
 }
   
 function submitSlide() {
-  document.querySelector(".submit-slide").classList.toggle("submitActive"); 
+  document.querySelector(".submit-slide").classList.remove("submitInactive"); 
+  document.querySelector(".submit-slide").classList.add("submitActive"); 
+  console.log(document.querySelector(".submit-slide").classList);
 }// call this in our submitBreak f
 
 function slideBack() {
-  document.querySelector(".submit-slide").classList.add("submitInactive");  
+  document.querySelector(".submit-slide").classList.add("submitInactive"); 
+  document.querySelector(".submit-slide").classList.remove("submitActive");   
+  console.log(document.querySelector(".submit-slide").classList);
 }
   
   
