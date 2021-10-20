@@ -388,6 +388,10 @@
   }
 }
 
+.submit-slide .content .content-bottom #killer-name-link {
+  color: white;
+}
+
 .submitActive {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
@@ -397,3 +401,4 @@
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
+/*# sourceMappingURL=style.css.map */

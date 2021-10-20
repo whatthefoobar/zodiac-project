@@ -43,7 +43,7 @@ function submitBreak(e){
       
   // RETRIEVE BIRTHDAY OBJECT FROM LOCAL STORAGE
   getLocalStorage();
-
+  
 };
 
 function getAge(dateString) {
@@ -163,13 +163,16 @@ function getLocalStorage() {
 }
 
 //FETCH DATA FROM API ENDPOINT 
+let killerName;
 
 function getKillersFromZodiac(zodiac){
   const resultBox = document.querySelector(".input-name");
   fetch(`/api?zodiac=${zodiac}`)
     .then((response) => response.json())
     .then((data) => {
-      resultBox.innerHTML= data[Math.floor(Math.random()* data.length)].killer;
+      let killerName = data[Math.floor(Math.random()* data.length)].killer
+      resultBox.innerHTML= killerName;
+      document.getElementById("killer-name-link").href = "https://www.google.com/search?q=" + killerName; //add link to goole the name of the killer
     });
 }
 
@@ -189,8 +192,6 @@ function slideBack() {
   document.querySelector(".submit-slide").classList.add("submitInactive"); 
   document.querySelector(".submit-slide").classList.remove("submitActive");   
 }
-  
-  
 
 
 
