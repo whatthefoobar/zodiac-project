@@ -50,8 +50,7 @@ $bp:(
         background-size: cover;
       }
       
-      .anmination-text {
-        
+      .animation-text {
         width: auto;
         position: fixed;
         text-align: center;
@@ -86,10 +85,6 @@ $bp:(
         }
       }
 
-
-
-    
-  
 
     .form {
       font-family: 'Coming Soon', cursive;
@@ -281,97 +276,4 @@ $bp:(
       transform: translateX(100%);
   }
       
-      
-    
-  // @Media queries
-
-  // @include query(small-mobile){
-  //   width: 88vw;
-  //   height: 60vh;
-  //   padding: none;
-  // }
-  //  @include query(tablet){...}
-  // @media screen and (max-width: 768px) {
-  //   // .birthday-form {
-  //   //   flex-direction: column;
-  //   // }
-      
-  //   // .form{
-  //   //   max-width: 88vw;
-  //   //   height: auto;
-  //   //   padding: none;
-  //   // }
-  //   // .content-top {
-  //   //   width: 100%;
-  //   //   justify-content: center;
-  //   // }
-              
-  //   // .content-bottom {       
-  //   //   justify-content:flex-start;
-  //   //   height: auto;
-  //   // }
-  //   }
-
-  // @media screen and (max-width: 715px) {
-  //   .content-top h1 {
-  //     font-size: 6vw;
-  //   }
-  //   .input-img {
-  //     height: auto;
-  //   }
-  // }
-
-  // @media screen and (max-width: 510px) {
-  //   // .input-img {
-  //   //   width: 90%;
-  //   //   height: auto;
-  //   // }
-  //   // .input-name {
-  //   // font-size: 27px;
-  //   // }
-          
-  //   // .input-text {
-  //   //   font-size: 20px;
-  //   // }
-  //   // .far {
-  //   //   font-size: 30px;
-  //   // }
-  // }
-
-
-  // @media screen and (max-width: 460px) {
-  //   .form{
-  //     width: 88vw;
-  //     height: 60vh;
-  //     padding: none;
-  // }}
-
-
-
-
-        
-        
-            
-            
-            
-    
-      
-    
-    
-  
-      
-          
-
-        
-   
-   
-  
-  
-  
- 
-  
- 
-  
- 
- 
   /*# sourceMappingURL=style.css.map */
