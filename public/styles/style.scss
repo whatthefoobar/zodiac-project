@@ -30,13 +30,14 @@ $bp:(
       display: flex;
       top: 0;
       left: 0;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
+      flex-direction: column-reverse;
 
       @include query(tablet){
         flex-direction: column;
       }
-   
+      
       #background-video {
         width: 100vw;
         height: 100vh;
@@ -47,8 +48,48 @@ $bp:(
         bottom: 0;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+      
+      .anmination-text {
+        
+        width: auto;
+        position: fixed;
+        text-align: center;
+        top: 75px;
+        font-size: 2rem;
+        font-family: 'Coming Soon', cursive;
+        color: seashell;
+        @include query(tablet){
+          font-size: 5vw;
+        }
 
-    }
+        .line-1 {
+          overflow: hidden; /* Ensures the content is not revealed until the animation */
+          border-right: .15em solid seashell; /* The typwriter cursor */
+          white-space: nowrap; /* Keeps the content on a single line */
+          margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+          letter-spacing: .15em; /* Adjust as needed */
+          animation: 
+            typing 1.9s steps(40, end),
+            
+            blink-caret .75s step-end infinite;
+            @keyframes typing {
+              from { width: 0 }
+              to { width: 100% }
+            }
+            
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+              from, to { border-color: transparent }
+              50% { border-color: rgba(210, 36, 30, 0.685); }
+            }
+        }
+      }
+
+
+
+    
+  
 
     .form {
       font-family: 'Coming Soon', cursive;
@@ -72,8 +113,9 @@ $bp:(
       }
       @include query(small-mobile){
         width: 88vw;
-        height: 60vh;
+        height: 44vh;
         padding: none;
+        font-size: 27px;
       }
      
       
@@ -86,8 +128,9 @@ $bp:(
         border-radius: 10px;
       }
     }
+  }
         
-    }
+    
 
     // Submit result slider
     .submit-slide {
