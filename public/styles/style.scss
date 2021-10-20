@@ -229,6 +229,7 @@ $bp:(
 
             @include query(big-mobile){
               font-size: 20px;
+              padding: 0 5vw;
             }
           }
         }
@@ -254,6 +255,7 @@ $bp:(
 
             @include query(big-mobile){
               font-size: 27px;
+              padding: 0 5vw;
             }
           }
           .input-img {
