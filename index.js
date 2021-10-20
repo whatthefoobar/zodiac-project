@@ -41,7 +41,6 @@ app.get("/", function(req,res){
 app.get("/api", async function(req, res){
   let killers = await name(req.query.zodiac)
   res.send(killers);
-  console.log(req.query);
 });
 
 app.listen(PORT, () => console.log(`server running on port ${PORT}`))

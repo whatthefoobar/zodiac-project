@@ -175,14 +175,9 @@ function getKillersFromZodiac(zodiac){
 
 // Form SLIDE FUNCTIONS
 
-// const modalBtn = document.querySelector(".modalBtn");
-// modalBtn.addEventListener("click", displayModal);
 const sideBackBtn = document.querySelector(".sideBackBtn");
 sideBackBtn.addEventListener("click", slideBack);
 
-// function displayModal() {
-//   document.querySelector(".birthday-form").classList.toggle("button-active");
-// }
   
 function submitSlide() {
   document.querySelector(".submit-slide").classList.remove("submitInactive"); 
@@ -193,7 +188,6 @@ function submitSlide() {
 function slideBack() {
   document.querySelector(".submit-slide").classList.add("submitInactive"); 
   document.querySelector(".submit-slide").classList.remove("submitActive");   
-  console.log(document.querySelector(".submit-slide").classList);
 }
   
   
