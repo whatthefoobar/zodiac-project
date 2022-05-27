@@ -24,7 +24,9 @@ $bp: (
 a {
   text-decoration: none;
 }
-
+#background-video-slide {
+  filter: brightness(50%);
+}
 // Birthday form page
 .birthday-form {
   width: 100%;
@@ -257,7 +259,7 @@ a {
           padding: 0 5vw;
         }
         &:hover {
-          color: rgb(162, 209, 162);
+          color: rgb(140, 205, 140);
         }
       }
       .input-img {
